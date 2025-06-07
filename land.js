@@ -356,3 +356,18 @@ $(() => {
         }
     });
 });
+
+$(() => {
+    $(".js-btn-anchor").click(function (e) {
+        e.preventDefault();
+        var aid = $(this).attr("data-to");
+        $('html,body').animate({scrollTop: $(aid).offset().top}, 1300);
+
+
+        if ($('.header').hasClass('active')) {
+            $('.burger').removeClass('active');
+            $('.header').removeClass('active');
+            $('body').removeClass('is-loading');
+        }
+    });
+});
