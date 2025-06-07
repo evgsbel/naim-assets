@@ -1,7 +1,7 @@
 
 /*new main*/
 .header {
-  z-undex: 50;
+  z-index: 50;
 }
 a.button:hover {
   color: ##262626;
@@ -505,6 +505,16 @@ a.button:hover {
 }
 .n-case__desc p {
   margin-bottom: 20px;
+  position: relative;
+  z-index: 10;
+}
+.n-case__desc ul,
+.n-case__desc ol {
+  position: relative;
+  z-index: 10;
+}
+.n-case__desc ul li::marker {
+  color: #01A7DE;
 }
 .n-case__desc p:last-child {
   margin-bottom: 0;
