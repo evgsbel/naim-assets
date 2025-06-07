@@ -1,5 +1,8 @@
 
 /*new main*/
+.header {
+  z-undex: 50;
+}
 a.button:hover {
   color: ##262626;
 }
