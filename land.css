@@ -89,7 +89,7 @@ a.button:hover {
 .n-hero__img {
   position: absolute;
   top: 30%;
-  right: -80px;
+  right: -140px;
   transform: translateY(-50%) translateX(100px); /* стартовое смещение вправо */
   opacity: 0;
   transition: transform 0.8s ease-out, opacity 0.8s ease-out; /* задержка 0.3s */
