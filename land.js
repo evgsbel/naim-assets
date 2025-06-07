@@ -326,3 +326,33 @@ window.addEventListener('DOMContentLoaded', () => {
 
 
 });
+
+$(() => {
+    const $faqItems = $('.js-faq-item');
+
+    // Скрываем все, кроме первого
+    $faqItems.each(function (index) {
+        const $item = $(this);
+        const $content = $item.find('.js-faq-item__content');
+
+        if (index === 0) {
+            $item.addClass('active');
+        } else {
+            $content.hide();
+        }
+    });
+
+    // Обработчик клика
+    $('.js-toggle-faq').on('click', function () {
+        const $item = $(this).closest('.js-faq-item');
+        const $content = $item.find('.js-faq-item__content');
+
+        if ($item.hasClass('active')) {
+            $item.removeClass('active');
+            $content.stop(true, true).slideUp(200);
+        } else {
+            $item.addClass('active');
+            $content.stop(true, true).slideDown(200);
+        }
+    });
+});
